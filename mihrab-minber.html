@@ -1,34 +1,168 @@
-<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Mihrab & Minber — Divriği Ulu Camii ve Darüşşifası</title><style>
-:root{ --bg:#ffffff;--panel:#ffffff;--text:#111827;--muted:#4b5563;--brand:#8a5a00;--accent:#1d4ed8;--border:#e5e7eb; }
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--text);background:var(--bg);}
-a{color:var(--accent);text-decoration:none}
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid var(--border)}
-.wrap{max-width:1100px;margin:0 auto;padding:16px}
-.row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-.hero{padding:24px 16px 0}
-.title{font-size:clamp(24px,3.6vw,40px);font-weight:800;line-height:1.1;margin:0}
-.subtitle{color:var(--muted);margin-top:8px}
-.chip{display:inline-flex;gap:8px;align-items:center;background:#f8fafc;border:1px solid var(--border);border-radius:999px;padding:8px 12px;color:#0f172a}
-.lang{margin-left:auto}
-button,select{background:#f3f4f6;color:var(--text);border:1px solid var(--border);border-radius:12px;padding:10px 12px;cursor:pointer}
-button:hover,select:hover{background:#e5e7eb}
-main section{padding:16px}
-.card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:16px}
-h2{font-size:clamp(18px,2.6vw,28px);margin:0 0 8px}
-p{line-height:1.6}
-.grid{display:grid;gap:14px}
-@media(min-width:760px){.grid.cols-2{grid-template-columns:1fr 1fr}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#fff}
-figure img{width:100%;display:block;height:240px;object-fit:cover}
-figcaption{font-size:12px;color:#334155;padding:8px 10px;background:#f8fafc;border-top:1px solid var(--border)}
-.badge{display:inline-block;background:#f8fafc;color:#0f172a;border:1px solid var(--border);border-radius:10px;padding:4px 8px;margin-right:6px;font-size:12px}
-.footer{padding:24px 16px;color:#334155;border-top:1px solid var(--border)}
-.source{font-size:13px;color:#475569}
-.list-links a{display:block;padding:8px 12px;border:1px solid var(--border);border-radius:12px;margin-bottom:8px;background:#fff}
-audio{width:100%;}
-.back{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--border);border-radius:10px;background:#f8fafc}
-.controls{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
-.sr{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-</style></head><body><header><div class="wrap row"><a class="back" href="../index.html">← Geri / Back</a><div class="lang" style="margin-left:auto"><a href="#" onclick="st1();return false;">🔊 Dinle (TR)</a> · <a href="#" onclick="st2();return false;">🔊 Listen (EN)</a></div></div><div class="wrap hero"><h1 class="title">Mihrab & Minber</h1></div></header><main class="wrap"><section class="grid cols-2"><div class="card"><h2>TR</h2><p id="text-tr">Büyük taş mihrap, sivri kemerli niş ve derin rumi silmelerle benzersizdir. Ters ve dolu kalpler ile lale motifleri Allah’a yönelişi sembolize eder. Minber ise abanozdan kündekârî tekniğiyle yapılmış bir şaheserdir; 21 yazı kuşağı ve ustanın imzası bulunur.</p><div class="controls"><button onclick="st1()">🔊 Dinle (TR)</button><button onclick="st0()">⏹️ Durdur</button></div></div><div class="card"><h2>EN</h2><p id="text-en">The monumental stone mihrab, with its pointed‑arch niche and deep rumi moldings, has no true parallel. Inverted and filled hearts together with a tulip motif symbolize the turning of hearts toward God. The ebony minbar is a masterpiece of the interlocking kündekâri technique, bearing 21 inscription bands and the craftsman’s signature.</p><div class="controls"><button onclick="st2()">🔊 Listen (EN)</button><button onclick="st0()">⏹️ Stop</button></div></div><div class="controls"><button onclick="st3('tr-TR')">🔊 Dinle (TR)</button><button onclick="st3('en-US')">🔊 Listen (EN)</button><button onclick="st0()">⏹️ Durdur</button></div></section><section><h2>Görseller</h2><div class="grid cols-3" id="gallery-captions"><figure><img alt="" src="../assets/images/mihrap.png"><figcaption></figcaption></figure><figure><img alt="" src="../assets/images/minber.png"><figcaption></figcaption></figure><figure><img alt="Mihrab & Minber" src="../assets/images/mm-1.jpg" onerror="this.onerror=null;this.src='https://www.kulturportali.gov.tr/medya/fotograf/fotodokuman/3951/divrigi'"><figcaption>Mihrab & Minber</figcaption></figure><figure><img alt="Mihrab & Minber" src="../assets/images/mm-2.jpg" onerror="this.onerror=null;this.src='https://www.kulturportali.gov.tr/medya/fotograf/fotodokuman/5149/divrigi'"><figcaption>Mihrab & Minber</figcaption></figure></div><div class="controls"><button onclick="st3('tr-TR')">🔊 Dinle (TR)</button><button onclick="st3('en-US')">🔊 Listen (EN)</button><button onclick="st0()">⏹️ Durdur</button></div></section></main><footer class="footer wrap"><div>© <span id="y"></span> Divriği Ulu Camii ve Darüşşifası</div></footer><script> (function(){ function st0(){ if ('speechSynthesis' in window) window.speechSynthesis.cancel(); } function speakFrom(selector, lang){ st0(); if (!('speechSynthesis' in window)) { return; } var nodes = document.querySelectorAll(selector); var text = ''; nodes.forEach(function(n){ text += ' ' + (n.innerText || n.textContent || ''); }); var u = new SpeechSynthesisUtterance(text.trim()); u.lang = lang; u.rate = 1; u.pitch = 1; window.speechSynthesis.speak(u); } window.st0 = st0; window.st1 = function(){ speakFrom('#text-tr', 'tr-TR'); }; window.st2 = function(){ speakFrom('#text-en', 'en-US'); }; // Stop speech when page is hidden or being unloaded ['pagehide','beforeunload','visibilitychange'].forEach(function(evt){ window.addEventListener(evt, function(){ if (evt === 'visibilitychange' && !document.hidden) return; st0(); }); }); })();
-</script></body></html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mihrab & Minber — Divriği Ulu Camii ve Darüşşifası</title>
+
+  <style>
+    :root{ --bg:#ffffff;--panel:#ffffff;--text:#111827;--muted:#4b5563;--accent:#1d4ed8;--border:#e5e7eb; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--text);background:var(--bg);}
+    a{color:var(--accent);text-decoration:none}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid var(--border)}
+    .wrap{max-width:1100px;margin:0 auto;padding:16px}
+    .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    .title{font-size:clamp(24px,3.6vw,40px);font-weight:800;line-height:1.1;margin:0}
+    .muted{color:var(--muted)}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:16px}
+    h2{font-size:clamp(18px,2.6vw,28px);margin:0 0 8px}
+    p{line-height:1.7;margin:0}
+    .grid{display:grid;gap:14px}
+    @media(min-width:760px){.grid.cols-2{grid-template-columns:1fr 1fr}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#fff}
+    figure img{width:100%;display:block;height:240px;object-fit:cover}
+    figcaption{font-size:12px;color:#334155;padding:8px 10px;background:#f8fafc;border-top:1px solid var(--border)}
+    .footer{padding:24px 16px;color:#334155;border-top:1px solid var(--border)}
+    .back{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--border);border-radius:10px;background:#f8fafc}
+    .controls{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 0}
+    button{background:#f3f4f6;color:var(--text);border:1px solid var(--border);border-radius:12px;padding:10px 12px;cursor:pointer}
+    button:hover{background:#e5e7eb}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap row">
+    <a class="back" href="../index.html">← Geri / Back</a>
+  </div>
+
+  <div class="wrap">
+    <h1 class="title">Mihrab & Minber</h1>
+    <p class="muted" style="margin-top:8px">TR/EN açıklamalar ve görseller.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- Metinler -->
+  <section class="grid cols-2" style="padding:16px 0">
+    <div class="card">
+      <h2>TR</h2>
+      <p id="text-tr">
+        Büyük taş mihrap, sivri kemerli niş ve derin rumi silmelerle benzersizdir.
+        Ters ve dolu kalpler ile lale motifleri Allah’a yönelişi sembolize eder.
+        Minber ise abanozdan kündekârî tekniğiyle yapılmış bir şaheserdir;
+        21 yazı kuşağı ve ustanın imzası bulunur.
+      </p>
+
+      <!-- SADECE burada dinleme -->
+      <div class="controls">
+        <button type="button" onclick="speak('#text-tr','tr-TR')">🔊 Dinle (TR)</button>
+        <button type="button" onclick="st0()">⏹️ Durdur</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>EN</h2>
+      <p id="text-en">
+        The monumental stone mihrab, with its pointed-arch niche and deep rumi moldings, has no true parallel.
+        Inverted and filled hearts together with a tulip motif symbolize the turning of hearts toward God.
+        The ebony minbar is a masterpiece of the interlocking kündekâri technique, bearing 21 inscription bands
+        and the craftsman’s signature.
+      </p>
+
+      <!-- SADECE burada dinleme -->
+      <div class="controls">
+        <button type="button" onclick="speak('#text-en','en-US')">🔊 Listen (EN)</button>
+        <button type="button" onclick="st0()">⏹️ Stop</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Görseller (SES YOK) -->
+  <section style="padding:16px 0">
+    <h2>Görseller</h2>
+
+    <div class="grid cols-3" id="gallery">
+      <figure>
+        <!-- kökte: mihrap.png -->
+        <img alt="Mihrab" src="../mihrap.png" loading="lazy" onerror="imgFail(this)">
+        <figcaption>Mihrab</figcaption>
+      </figure>
+
+      <figure>
+        <!-- kökte: minber.png -->
+        <img alt="Minber" src="../minber.png" loading="lazy" onerror="imgFail(this)">
+        <figcaption>Minber</figcaption>
+      </figure>
+
+      <!-- İsterseniz 3. görsel ekleyin: repoya yükleyip adını buraya yazın
+      <figure>
+        <img alt="Mihrab/Minber detayı" src="../mm_detay.png" loading="lazy" onerror="imgFail(this)">
+        <figcaption>Detay</figcaption>
+      </figure>
+      -->
+    </div>
+
+    <p class="muted" style="margin-top:10px">
+      Not: Görsel görünmezse dosya adı/uzantısı veya büyük-küçük harf uyuşmazlığı vardır. Console’da hangi dosyanın yüklenemediği yazacaktır.
+    </p>
+  </section>
+</main>
+
+<footer class="footer wrap">
+  <div>© <span id="y"></span> Divriği Ulu Camii ve Darüşşifası</div>
+</footer>
+
+<script>
+(function(){
+  var y = document.getElementById('y');
+  if (y) y.textContent = new Date().getFullYear();
+
+  function st0(){
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  }
+
+  function speak(selector, lang){
+    st0();
+    if (!('speechSynthesis' in window)) return;
+
+    var el = document.querySelector(selector);
+    if (!el) {
+      console.warn('TTS: Element bulunamadı:', selector);
+      return;
+    }
+
+    var text = (el.innerText || el.textContent || '').trim();
+    if (!text) {
+      console.warn('TTS: Metin boş:', selector);
+      return;
+    }
+
+    try { window.speechSynthesis.getVoices(); } catch(e){}
+
+    var u = new SpeechSynthesisUtterance(text);
+    u.lang = lang;
+    u.rate = 1;
+    u.pitch = 1;
+    window.speechSynthesis.speak(u);
+  }
+
+  function imgFail(img){
+    console.error('Görsel yüklenemedi:', img.getAttribute('src'));
+  }
+
+  window.st0 = st0;
+  window.speak = speak;
+  window.imgFail = imgFail;
+
+  ['pagehide','beforeunload','visibilitychange'].forEach(function(evt){
+    window.addEventListener(evt, function(){
+      if (evt === 'visibilitychange' && !document.hidden) return;
+      st0();
+    });
+  });
+})();
+</script>
+</body>
+</html>
